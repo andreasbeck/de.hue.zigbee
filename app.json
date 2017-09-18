@@ -1,0 +1,486 @@
+{
+  "id": „de.hue.zigbee",
+  "version": "0.0.1",
+  "sdk": 2,
+  "compatibility": ">=1.5.0",
+  "category": "lights",
+  "name": {
+    "en": "Philips Hue (ZigBee)",
+    "nl": "Philips Hue (ZigBee)"
+  },
+  "description": {
+    "en": "Control your Philips Hue lights (ZigBee) with Homey!",
+    "nl": "Gebruik je Philips Hue lampen (ZigBee) met Homey!"
+  },
+  "author": {
+    "name": „Seraphim“
+  },
+  "images": {
+    "large": "assets/images/large.jpg",
+    "small": "assets/images/small.jpg"
+  },
+  "speech": [],
+  "drivers": [
+    {
+      "id": "hue_color_lamp",
+      "name": {
+        "en": "Hue color lamp (ZigBee)",
+        "nl": "Hue color lamp (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LCT001", "LCT007", "LCT010", "LCT014" ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "First unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel eerst de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_color_spot",
+      "name": {
+        "en": "Hue color spot (ZigBee)",
+        "nl": "Hue color spot (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LCT003" ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "First unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel eerst de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_ambiance_lamp",
+      "name": {
+        "en": "Hue ambiance lamp (ZigBee)",
+        "nl": "Hue ambiance lamp (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LTW001", "LTW004", "LTW010", "LTW015" ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_ambiance_spot",
+      "name": {
+        "en": "Hue ambiance spot (ZigBee)",
+        "nl": "Hue ambiance spot (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LTW013",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_ambiance_ceiling",
+      "name": {
+        "en": "Hue ambiance ceiling (ZigBee)",
+        "nl": "Hue ambiance ceiling (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LTC001", "LTC002", "LTC003", "LTC004", "LTD001", "LTD002", "LTF001", "LTF002" ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_go",
+      "name": {
+        "en": "Hue go (ZigBee)",
+        "nl": "Hue go (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LLC020" ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel eerst de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_bloom",
+      "name": {
+        "en": "Hue bloom (ZigBee)",
+        "nl": "Hue bloom (ZigBee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation"
+      ],
+      "images": {
+        "large": "assets/images/large.jpg",
+        "small": "assets/images/small.jpg"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "LLC005", "LLC007", "LLC011", "LLC012" ],
+        "deviceId": 512,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Unpair the light from the Hue bridge.",
+            "nl": "Ontkoppel eerst de lamp van de Hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "hue_dimmer_switch",
+      "name": {
+        "nl": "Hue dimmer switch (ZigBee)",
+        "en": "Hue dimmer switch (ZigBee)"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [ "RWL021" ],
+        "deviceId": [ 2080, 2096 ],
+        "profileId": 49246,
+        "learnmode": {
+          "image": "/drivers/hue_dimmer_switch/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\nWarning: This will reset the dimmer switch completely!",
+            "nl": "Houdt de setup knop op de achterkant voor tenminste 10 seconden ingedrukt tot de LED groen is.\n\nWaarschuwing: Dit zal de dimmer switch volledig resetten!"
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/hue_dimmer_switch/assets/images/large.jpg",
+        "small": "/drivers/hue_dimmer_switch/assets/images/small.jpg"
+      }
+    }
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "hue_dimmer_switch_on",
+        "title": {
+          "en": "On-button pressed",
+          "nl": "Aan-knop ingedrukt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=hue_dimmer_switch"
+          }
+        ]
+      },
+      {
+        "id": "hue_dimmer_switch_off",
+        "title": {
+          "en": "Off-button pressed",
+          "nl": "Uit-knop ingedrukt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=hue_dimmer_switch"
+          }
+        ]
+      },
+      {
+        "id": "hue_dimmer_switch_dim",
+        "title": {
+          "en": "Dim buttons",
+          "nl": "Dim knoppen"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=hue_dimmer_switch"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "up-press",
+                "label": {
+                  "en": "Dim-up pressed",
+                  "nl": "Dim-omhoog ingedrukt"
+                }
+              },
+              {
+                "id": "up-hold",
+                "label": {
+                  "en": "Dim-up hold",
+                  "nl": "Dim-omhoog ingehouden"
+                }
+              },
+              {
+                "id": "down-press",
+                "label": {
+                  "en": "Dim-down pressed",
+                  "nl": "Dim-omlaag ingedrukt"
+                }
+              },
+              {
+                "id": "down-hold",
+                "label": {
+                  "en": "Dim-down hold",
+                  "nl": "Dim-omlaag ingehouden"
+                }
+              },
+              {
+                "id": "release",
+                "label": {
+                  "en": "Dim-button released",
+                  "nl": "Dim-knop losgelaten"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditions": [],
+    "actions": []
+  }
+}
